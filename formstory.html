@@ -5,6 +5,18 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>order</title>
       <link rel="stylesheet" href="storybookcss.css"> 
+   <script>
+        var loadCount = 0;
+
+        function checkSubmit() {
+            loadCount++;
+            if (loadCount > 1) {
+                setTimeout(function() {
+                    window.location.href = 'order.html';
+                }, 1000); 
+            }
+        }
+    </script>
 </head>
 <body style="background-color:orange">
     <header class="navbar" style="background-color:violet">
@@ -24,7 +36,7 @@
     </div>
  <h1 style="text-align: center; margin-top: 20px;">Order</h1>
 
- <div style="text-align: center; margin-top: 30px;"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSculTtT1RF1g0BBm68ME5eO9GKjI3YnRtcmfqKA1H45lAsmfA/viewform?embedded=true" width="1200" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div>
+ <div style="text-align: center; margin-top: 30px;"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSculTtT1RF1g0BBm68ME5eO9GKjI3YnRtcmfqKA1H45lAsmfA/viewform?embedded=true" width="1200" height="1200" frameborder="0" marginheight="0" marginwidth="0" onload="checkSubmit()">Loading…</iframe></div>
  <table width="100%" style="background-color: violet;" >
         <tr><th width="25%"><p style="font-size: 20px;"><img src="LOGO.png" ID="TT"><br>SVM BOOK TREASURE<br><br>SVM Storybook shop helps all age people to read stories or gather knowledge.</th>
             <th width="25%" style="font-size: 20px;">Quick Links<br>
